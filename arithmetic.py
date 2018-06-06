@@ -18,7 +18,11 @@ def multiply(num1, num2):
 
 def divide(num1, num2):
     """Divide the first input by the second and return the result."""
-    return num1/num2
+    try:
+        return num1/num2
+    except ZeroDivisionError:
+        if num2 == 0:
+            print("You cannot divide by zero.")
 
 
 def square(num1):
@@ -41,9 +45,9 @@ def mod(num1, num2):
     return num1 % num2
 
 
-def multiply_add(num1, num2, num3):
+def add_mult(num1, num2, num3):
     return (num1 + num2) * num3
 
 
-def cube_add(num1, num2):
+def add_cubes(num1, num2):
     return cube(num1)+cube(num2)
